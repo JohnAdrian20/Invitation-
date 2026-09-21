@@ -62,17 +62,6 @@ export default function MapLocationSection({ data }: MapLocationSectionProps) {
             {t.googleMapsBtn}
           </a>
 
-          <a
-            href={data.wazeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="direction-btn"
-          >
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
-            </svg>
-            {t.wazeBtn}
-          </a>
 
           <a
             href={data.appleMapsUrl}

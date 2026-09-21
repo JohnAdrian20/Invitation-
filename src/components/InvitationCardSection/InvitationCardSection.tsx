@@ -55,37 +55,7 @@ export default function InvitationCardSection({
   const emptyDaysOffset = Array.from({ length: data.calendar.firstDayOffset || 0 }, (_, i) => i);
   const daysArray = Array.from({ length: data.calendar.totalDays }, (_, i) => i + 1);
 
-  // Generate .ics calendar download
-  const handleDownloadIcs = () => {
-    const icsContent = [
-      "BEGIN:VCALENDAR",
-      "VERSION:2.0",
-      "PRODID:-//Varman & Saru Wedding//EN",
-      "CALSCALE:GREGORIAN",
-      "METHOD:PUBLISH",
-      "BEGIN:VEVENT",
-      "UID:wedding-varman-saru-20261212@wedding.lk",
-      "DTSTAMP:20260101T000000Z",
-      "DTSTART:20261212T033000Z",
-      "DTEND:20261212T103000Z",
-      "SUMMARY:திருமண விழா | Wedding Celebration: Varman & Saru",
-      "DESCRIPTION:உங்களுடன் இந்த இனிய தருணத்தை பகிர்ந்து கொள்ள மகிழ்கிறோம். Balagala Tea Garden, Akuressa, Matara.",
-      "LOCATION:Balagala Tea Garden, Akuressa, Matara, Sri Lanka",
-      "STATUS:CONFIRMED",
-      "END:VEVENT",
-      "END:VCALENDAR",
-    ].join("\r\n");
 
-    const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.setAttribute("download", "Varman_and_Saru_Wedding.ics");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-  };
 
   const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Celebration:+Varman+%26+Saru&dates=20261212T033000Z/20261212T103000Z&details=உங்களுடன்+இந்த+இனிய+தருணத்தை+பகிர்ந்து+கொள்ள+மகிழ்கிறோம்.+Balagala+Tea+Garden&location=Balagala+Tea+Garden,+Akuressa,+Matara`;
 
@@ -198,20 +168,6 @@ export default function InvitationCardSection({
             </svg>
             <span>{t.googleCalendarBtn}</span>
           </a>
-
-          <button
-            type="button"
-            onClick={handleDownloadIcs}
-            className="calendar-sync-btn ics-btn"
-            aria-label="Download Calendar .ics file for Apple or Outlook"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-            <span>{t.icsDownloadBtn}</span>
-          </button>
         </div>
 
         <div className="deckled-divider">
