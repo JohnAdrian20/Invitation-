@@ -1,0 +1,110 @@
+/* src/components/MapLocationSection/MapLocationSection.css */
+
+.map-api-location-section {
+  background-color: var(--bg-cream);
+  justify-content: center;
+  align-items: center;
+  padding: 65px 0 48px;
+  display: flex;
+  overflow: hidden;
+}
+
+.map-api-location-section .section-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 780px;
+  padding: 0 20px;
+  display: flex;
+}
+
+.map-header-group {
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.location-pretag {
+  font-family: var(--font-tamil-sans);
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  color: var(--accent-terracotta);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.map-header-group .venue-title {
+  color: var(--text-primary);
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4.5vw, 2.3rem);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.map-header-group .venue-address {
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  font-family: var(--font-tamil-serif);
+  font-size: 1rem;
+}
+
+.map-frame-wrapper {
+  aspect-ratio: 4 / 3;
+  touch-action: pan-y;
+  border: 3px solid #ffffff;
+  border-radius: 14px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 992px) {
+  .map-frame-wrapper {
+    aspect-ratio: 16 / 9;
+    max-width: 760px;
+  }
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.map-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.direction-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 24px;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  background-color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-tamil-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.25s ease;
+}
+
+.direction-btn:hover {
+  color: var(--accent-sandstone);
+  border-color: var(--accent-gold-muted);
+  background: var(--bg-main);
+  transform: translateY(-2px);
+}

@@ -1,0 +1,197 @@
+/* src/components/ContactSection/ContactSection.css */
+
+.contact-section {
+  position: relative;
+  background-color: var(--bg-main);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 60px 20px 55px;
+  display: flex;
+  overflow: hidden;
+}
+
+.contact-section .section-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+  max-width: 740px;
+  display: flex;
+}
+
+.contact-header-group {
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.contact-pretag {
+  font-family: var(--font-tamil-sans);
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  color: var(--accent-terracotta);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.contact-header-group .section-title {
+  color: var(--text-primary);
+  margin: 0;
+  font-family: var(--font-tamil-serif);
+  font-size: clamp(1.6rem, 4.5vw, 2.3rem);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.contact-header-group .section-subtitle {
+  color: var(--text-muted);
+  font-family: var(--font-tamil-serif);
+  font-size: 0.98rem;
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+.contact-cards-wrapper {
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+}
+
+@media (min-width: 600px) {
+  .contact-cards-wrapper {
+    flex-direction: row;
+  }
+}
+
+.contact-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  padding: 28px 20px;
+  display: flex;
+  box-shadow: var(--shadow-subtle);
+}
+
+.contact-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--accent-gold-soft);
+  color: var(--accent-sandstone);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.contact-card .name {
+  color: var(--text-primary);
+  margin: 0 0 2px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.contact-card .role {
+  color: var(--accent-terracotta);
+  font-family: var(--font-tamil-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.contact-card .button-group {
+  gap: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-btn {
+  border-radius: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  font-family: var(--font-tamil-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.25s;
+  display: flex;
+}
+
+.contact-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.call-btn {
+  color: var(--text-secondary);
+  background-color: #ffffff;
+  border: 1px solid var(--border-subtle);
+}
+
+.call-btn:hover {
+  background: var(--bg-cream);
+  color: var(--accent-sandstone);
+}
+
+.wa-btn {
+  color: #ffffff;
+  background-color: #25d366;
+  border: 1px solid #25d366;
+}
+
+.wa-btn:hover {
+  background-color: #1eb857;
+}
+
+/* Footer Signature */
+.footer-couture-signature {
+  text-align: center;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid var(--border-delicate);
+  padding-top: 28px;
+  width: 100%;
+}
+
+.footer-monogram {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 4px;
+  color: var(--accent-gold-muted);
+}
+
+.footer-blessing {
+  font-family: var(--font-tamil-serif);
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.8;
+}
+
+.footer-copyright {
+  font-family: var(--font-tamil-sans);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  color: var(--text-light);
+  margin-top: 4px;
+}

@@ -1,0 +1,335 @@
+/* src/components/RsvpSection/RsvpSection.css */
+
+.rsvp-section {
+  position: relative;
+  width: 100%;
+  padding: 60px 20px 75px;
+  background: var(--bg-cream);
+  display: flex;
+  justify-content: center;
+}
+
+.rsvp-section .section-container {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rsvp-header-group {
+  text-align: center;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rsvp-pretag {
+  font-family: var(--font-tamil-sans);
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  color: var(--accent-terracotta);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.rsvp-header-group .section-title {
+  font-family: var(--font-tamil-serif);
+  font-size: clamp(1.6rem, 4.5vw, 2.3rem);
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.rsvp-header-group .section-subtitle {
+  font-family: var(--font-tamil-serif);
+  font-size: clamp(0.92rem, 2.3vw, 1.05rem);
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.rsvp-header-group .section-subtitle strong {
+  color: var(--text-primary);
+}
+
+/* Card Suite */
+.rsvp-card-suite {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 30px 20px;
+  box-shadow: var(--shadow-subtle);
+}
+
+@media (min-width: 600px) {
+  .rsvp-card-suite {
+    padding: 38px 32px;
+  }
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row-dual {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 550px) {
+  .form-row-dual {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-label {
+  font-family: var(--font-tamil-sans);
+  font-size: 0.76rem;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.opt-tag {
+  font-weight: 400;
+  color: var(--text-light);
+  font-size: 0.7rem;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  background: var(--bg-main);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-family: var(--font-tamil-sans);
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--accent-gold-muted);
+}
+
+.attendance-toggle-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.att-btn {
+  background: var(--bg-main);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 12px 10px;
+  font-family: var(--font-tamil-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+
+.att-active-yes {
+  background: var(--accent-sandstone);
+  color: #fffdfa;
+  border-color: var(--accent-sandstone);
+}
+
+.att-active-no {
+  background: #f4edea;
+  color: #8a483a;
+  border-color: #d8b8b0;
+}
+
+/* Counter */
+.counter-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-main);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 5px 12px;
+}
+
+.counter-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.counter-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.count-display {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Actions Row */
+.form-actions-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+@media (min-width: 500px) {
+  .form-actions-row {
+    flex-direction: row;
+  }
+}
+
+.rsvp-submit-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-sandstone);
+  color: #fffdfa;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 20px;
+  font-family: var(--font-tamil-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.rsvp-submit-btn:hover {
+  background: var(--accent-terracotta);
+}
+
+.rsvp-whatsapp-direct-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #25d366;
+  color: #ffffff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 18px;
+  font-family: var(--font-tamil-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+  transition: all 0.25s ease;
+}
+
+.rsvp-whatsapp-direct-btn:hover {
+  background: #1eb857;
+}
+
+/* Confirmation Card */
+.rsvp-confirmation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px 10px;
+}
+
+.confirmation-crest-ring {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(184, 152, 88, 0.12);
+  border: 1.5px solid var(--accent-gold-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.confirm-check {
+  font-size: 1.6rem;
+  color: var(--accent-terracotta);
+}
+
+.thank-you-headline {
+  font-family: var(--font-tamil-serif);
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.thank-you-body {
+  font-family: var(--font-tamil-serif);
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 480px;
+  margin-bottom: 22px;
+}
+
+.confirmation-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.whatsapp-confirm-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25d366;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-family: var(--font-tamil-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.edit-rsvp-link {
+  background: none;
+  border: none;
+  font-family: var(--font-tamil-sans);
+  font-size: 0.72rem;
+  color: var(--text-light);
+  cursor: pointer;
+  text-decoration: underline;
+}
